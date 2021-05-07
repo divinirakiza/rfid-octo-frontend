@@ -6,8 +6,7 @@
 <div class="content-area">
     <div class="title-area">
         <div class="title">
-            <h4>
-                RFID MANAGEMENT &nbsp;
+            <h4>  RFID MANAGEMENT &nbsp;
                 <FolderIcon width={14} height={14} color={'red'}/>
             </h4>
         </div>
@@ -20,6 +19,34 @@
         <div class="tab">
             <a href="#transactions">Transactions</a>
         </div>
+    </div>
+
+    <div class="content">
+        <section id="cards">
+            <table>
+                <thead>
+                    <tr>
+                        <th>UUID</th>
+                        <th>Balance</th>
+                        <th>Transactions</th>
+                        <th>Enabled</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>673488949054948494</td>
+                        <td>5000 Frw</td>
+                        <td>5</td>
+                        <td>true</td>
+                        <td>2013-30-2 12:23:32</td>
+                        <td>Actions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="transactions"></section>
     </div>
 
 
@@ -54,5 +81,40 @@
         color: #2C405A;
         font-size: 14px;
     }
+
+    .content {
+        margin-top: 1.8rem;
+    }
+
+    .content section table {
+        width: 100%;
+        border-spacing: 0 1rem;
+    }
+
+
+
+    .content section table thead tr th {
+        padding-bottom: 0.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 10px;
+        border-bottom: 1px solid #E7E7E7;
+        color:#8DABC4;
+        font-weight: normal;
+        text-align: left;
+    }
+
+
+    .content section table tbody {
+        margin-top: 2rem;
+    }
+    .content section table tbody tr{
+        background-color: #F4F6FB;
+        border-radius: 6px;
+        padding: 2rem 2rem;
+
+    }
+
+
 
 </style>
