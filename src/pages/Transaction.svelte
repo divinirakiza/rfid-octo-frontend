@@ -212,21 +212,46 @@
         flex-direction: column;
         align-items: center;
     }
-    #modal h3 {
+
+
+    #modal .header h3 {
         font-size: 13px;
         text-transform: uppercase;
         color: #395A76;
-        text-decoration: underline
+        /* text-decoration: underline */
         
     }
 
+    #modal .details {
+        padding: 2rem 10rem;
+    }
+
+    #modal .details .detail {
+        display: flex;
+        margin-bottom: 0.7rem;
+    }
+
+    #modal .details .detail p.key {
+        font-size: 13px;
+        color: #395A76;
+
+        text-transform: uppercase;
+        width: 10rem;
+    }
+
+    #modal .details .detail p.value {
+        font-size: 13px;
+        width: 10rem;
+        color: #395A76;
+
+    }
     #close-btn {
-    align-self: flex-end;
+     align-self: flex-end;
     }
 
     #close-btn:hover {
-    cursor: pointer;
-    color: #395A76;
+        cursor: pointer;
+        color: #395A76;
     }
 
 </style>
