@@ -9,6 +9,11 @@
 </div>
 
 <style>
-    
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+    .navbar {
+        font-family: 'Righteous', cursive;
+        background-color: #190933;
+    }
 
 </style>
