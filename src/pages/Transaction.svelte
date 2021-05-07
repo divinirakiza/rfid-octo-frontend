@@ -23,10 +23,16 @@
     $: transactions = [];
 
 
-    onMount(async () => {
+    async function getTransactions() {
         const response = await fetch('http://localhost:3000/api/v1/transactions');
         transactions = await response.json();
+    }
+
+    onMount(async () => {
+        setInterval(() => getTransactions(), 100)
     });
+
+
 
 
 

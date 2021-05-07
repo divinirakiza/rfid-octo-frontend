@@ -9,7 +9,12 @@
 
 
     onMount(async () => {
-        const response = await fetch('http://localhost:3000/api/v1/cards');
+
+    });
+	
+
+	async function getCards() {
+		const response = await fetch('http://localhost:3000/api/v1/cards');
 		const items = await response.json();
 
 		for (const item of items) {
@@ -18,8 +23,13 @@
 		}
 
 		cards = items;
+    }
+
+    onMount(async () => {
+        setInterval(() => getCards(), 100)
     });
-	
+
+
 
 
 
