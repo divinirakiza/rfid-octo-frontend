@@ -1,22 +1,37 @@
 <script>
+    import FolderIcon from '../icons/FolderIcon.svelte';
 
 
 </script>
 
 <div class="content-area">
+    <div class="title-area">
+        <div class="title">
+            <h4>
+                RFID MANAGEMENT
+                
+                
+            </h4>
+        </div>
+    </div>
+
     <div class="tabs-area">
         <div class="tab active">
-            <a href="#cards">Cards</a>
+            <a href="#cards">RFID Cards</a>
         </div>
         <div class="tab">
             <a href="#transactions">Transactions</a>
         </div>
     </div>
 
-    
+
 </div>
 
 <style>
+
+    .title-area {
+        margin-bottom: 1rem;
+    }
 
     .tabs-area {
         border-bottom: 1px solid #E7E7E7;

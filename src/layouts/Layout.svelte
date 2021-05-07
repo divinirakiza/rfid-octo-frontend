@@ -28,7 +28,7 @@
 
 	.content-area{
 		margin-bottom: 0;
-		padding: 58px;
+		padding: 3rem 3.625rem;
 		min-height: calc(100vh - 60px);
 	}
 
