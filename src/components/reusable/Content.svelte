@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
     import FolderIcon from '../icons/FolderIcon.svelte';
-
 
 </script>
 
@@ -8,9 +7,8 @@
     <div class="title-area">
         <div class="title">
             <h4>
-                RFID MANAGEMENT
-                
-                
+                RFID MANAGEMENT &nbsp;
+                <FolderIcon width={14} height={14} color={'red'}/>
             </h4>
         </div>
     </div>
@@ -30,7 +28,7 @@
 <style>
 
     .title-area {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .tabs-area {
