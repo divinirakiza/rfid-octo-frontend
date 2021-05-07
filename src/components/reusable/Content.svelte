@@ -1,6 +1,9 @@
 <script lang="ts">
     import FolderIcon from '../icons/FolderIcon.svelte';
 
+    const array: any = [
+        1, 2, 3
+    ]
 </script>
 
 <div class="content-area">
@@ -35,6 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {#each array as arr, i}
                     <tr>
                         <td>673488949054948494</td>
                         <td>5000 Frw</td>
@@ -43,6 +47,7 @@
                         <td>2013-30-2 12:23:32</td>
                         <td>Actions</td>
                     </tr>
+                    {/each}
                 </tbody>
             </table>
         </section>
@@ -53,6 +58,30 @@
 </div>
 
 <style>
+
+
+#cards {
+        height: 48vh !important;
+        overflow-y: scroll;
+        padding: 0 0.5rem;
+        z-index: 0;
+    }
+
+    #cards::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #f8f8f8;
+    }
+        
+    #cards::-webkit-scrollbar{
+        width: 4px;
+        height: 6px;
+        background-color: #f8f8f8;
+    }
+
+    #cards::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #3648A5;
+    }
 
     .title-area {
         margin-bottom: 1.5rem;
@@ -114,19 +143,23 @@
     }
 
     .content section table tbody tr td {
-        padding: 1rem 0;
+        padding: 0.7rem 0;
         text-align: left;
         font-size: 11px;
         color: #395A76;
     }
 
-    .content section table tbody tr td:first-child, .content section table tbody tr td:last-child {
+    .content section table tbody tr td:first-child{
         border-top-left-radius: 6px;
         border-bottom-left-radius: 6px;
         padding-left: 1rem;
 
     }
-
+    .content section table tbody tr td:last-child  {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        padding-left: 1rem;
+    }
 
 
 </style>
