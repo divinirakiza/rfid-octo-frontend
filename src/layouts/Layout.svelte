@@ -18,9 +18,13 @@
 	<div class="footer-area">
 		<Footer />
 	</div>
+
 </main>
 
 <style>
+	main {
+		height: 100vh;
+	}
 
 	.content-area{
 		margin-bottom: 0;
@@ -32,11 +36,7 @@
         left: 0;
         bottom: 0px;
         width: 100%;
-        background-color: #007acc;
-        color: white;
         position: absolute;
-        text-align: center;
-        padding: 5px 10px;
     }
 
 </style>

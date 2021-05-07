@@ -2,9 +2,10 @@
 	import Layout from './layouts/Layout.svelte';
 </script>
 
-<main>
-	<Layout />
-</main>
+
+
+<Layout />
+
 
 <style>
 </style>

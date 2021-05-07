@@ -10,15 +10,18 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-    .navbar {
-        background-color: #190933;
+    .footer {
+        background-color: #fff;
         color: #fff;
+        border-top: 1px solid #E7E7E7;
         padding: 1rem 2rem;
     }
 
-    .navbar h3 {
-        font-size: 14px;
-        font-family: 'Noto Sans JP', sans-serif;
+    .footer p {
+        font-size: 12px;
+        color: #190933;
+        text-align: right;
+        /* font-family: 'Noto Sans JP', sans-serif; */
         cursor: pointer;
     }
 
