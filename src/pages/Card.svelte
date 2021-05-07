@@ -35,15 +35,15 @@
 	<tbody>
 		{#each cards as card, i}
 		<tr>
-			<td class="bold">673488949054948494</td>
-			<td>5000 Frw</td>
+			<td class="bold">{card.uuid}</td>
+			<td>{card.balance}Frw</td>
 			<td>5</td>
 			<td class="status">
-				<span class="true">
-					<span>TRUE</span>
+				<span class={card.enabled}>
+					<span>{card.enabled}</span>
 				 </span>   
 			</td>
-			<td>2013-30-2 12:23:32</td>
+			<td>{card.created_at}</td>
 			<td>
 				<span class="more">
 					<svg id="Layer_1" stroke="#395a7629" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="14" height="14" fill="" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M25,14.39C11.32,14.39,1,19,1,25S11.32,35.61,25,35.61,49,31.05,49,25,38.68,14.39,25,14.39Zm0,18.22c-12.38,0-21-4-21-7.61s8.62-7.61,21-7.61,21,4,21,7.61S37.38,32.61,25,32.61Z" fill="#000000"></path><path d="M25,19.45A5.55,5.55,0,1,0,30.55,25,5.56,5.56,0,0,0,25,19.45Zm0,7.1A1.55,1.55,0,1,1,26.55,25,1.54,1.54,0,0,1,25,26.55Z" fill="#000000"></path></svg>
@@ -114,6 +114,7 @@
         border-radius: 9999px;
         padding: 0.2rem 1.8em;
         color: white;
+		text-transform: uppercase;
         background-color: rgba(63, 218, 92, 0.77);
         font-size: 9px;
         cursor: pointer
