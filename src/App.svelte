@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from './pages/Card.svelte';
+	import Layout from './layouts/Layout.svelte';
 
 	export let name: string;
 </script>
