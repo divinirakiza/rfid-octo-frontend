@@ -21,7 +21,24 @@
 
             div.classList.add('show');
         }
+
+
+        const tabber: HTMLElement = document.getElementById(tab + '-tab');
+
+        
+        const parentTabber: HTMLElement = tabber.parentElement;
+        
+        const activeTabs = document.getElementsByClassName('tab active');
+
+        for (const activeTab of activeTabs) {
+                activeTab.classList.remove('active')
+            }
+
+        parentTabber.classList.add('active');
+
 	}
+
+
 
 </script>
 
@@ -36,10 +53,10 @@
 
     <div class="tabs-area">
         <div class="tab active">
-            <a href="#cards" on:click={() => activateTab('cards')}>RFID Cards</a>
+            <a href="#cards" id="cards-tab" on:click={() => activateTab('cards')}>RFID Cards</a>
         </div>
         <div class="tab">
-            <a href="#transactions" on:click={() => activateTab('transactions')}>Transactions</a>
+            <a href="#transactions" id="transactions-tab" on:click={() => activateTab('transactions')}>Transactions</a>
         </div>
     </div>
 
