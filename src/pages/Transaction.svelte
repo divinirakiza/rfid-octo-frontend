@@ -3,28 +3,64 @@
 	const array: any = [
         1, 2, 3
     ]
+    
+    const openModal = () => {
+        const modal: HTMLElement = document.getElementById('modal-background');
+        modal.style.display = 'block';
+    }
+
+    const closeModal = () => {
+        const modal: HTMLElement = document.getElementById('modal-background');
+        modal.style.display = 'none';
+        modal.classList.remove('hidden')
+    }
+
+
 </script>
 
-<table>
-	<thead>
-		<tr>
-			<th>Transaction ID</th>
-			<th>Card</th>
-			<th>Transport Fare</th>
-			<th>Done at</th>
-		</tr>
-	</thead>
-	<tbody>
-		{#each array as arr, i}
-		<tr>
-			<td class="bold">673488949054948494</td>
-			<td>5000 Frw</td>
-			<td>5</td>
-			<td>2013-30-2 12:23:32</td>
-		</tr>
-		{/each}
-	</tbody>
-</table>
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Card</th>
+                <th>Transport Fare</th>
+                <th>Done at</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each array as arr, i}
+            <tr>
+                <td class="bold">673488949054948494</td>
+                <td>5000 Frw</td>
+                <td>5</td>
+                <td>2013-30-2 12:23:32</td>
+                <td>
+                    <span on:click={openModal}>view</span>
+                </td>
+            </tr>
+            {/each}
+        </tbody>
+    </table>
+
+    <div id="modal-background" class="hidden">
+        <div id="modal">
+          <span id="close-btn" on:click={closeModal}>&times;</span>
+          <p>HOWDY FOLKS!</p>
+          <div class="buttons">
+            <button class="yes">
+              YES
+            </button>
+            <button class="no">
+              NO
+            </button>
+          </div>
+        </div>
+      </div>
+
+</section>
+
+
 
 <style>
 
@@ -115,4 +151,59 @@
     table tbody tr td .more {
         cursor: pointer;
     }
+
+    .hidden {
+        display: none;
+    }
+
+    #modal-background {
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    #modal {
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        font-size: 1.5rem;
+    
+    }
+
+    .yes, .no {
+  border: none;
+  padding: 7px 14px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.yes {
+  background-color: #00ff00;
+}
+
+.no {
+  background-color: #ff0000;
+}
+
+#close-btn {
+  align-self: flex-end;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
 </style>

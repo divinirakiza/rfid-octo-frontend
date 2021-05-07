@@ -24,7 +24,6 @@
 
 
         const tabber: HTMLElement = document.getElementById(tab + '-tab');
-
         
         const parentTabber: HTMLElement = tabber.parentElement;
         
@@ -68,7 +67,6 @@
                 <TransactionPage />
         </div>
     </div>
-
 
 </div>
 
