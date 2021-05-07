@@ -40,10 +40,14 @@
                 <tbody>
                     {#each array as arr, i}
                     <tr>
-                        <td>673488949054948494</td>
+                        <td class="bold">673488949054948494</td>
                         <td>5000 Frw</td>
                         <td>5</td>
-                        <td>true</td>
+                        <td class="status">
+                            <span class="true">
+                                <span>TRUE</span>
+                             </span>   
+                        </td>
                         <td>2013-30-2 12:23:32</td>
                         <td>Actions</td>
                     </tr>
@@ -161,5 +165,35 @@
         padding-left: 1rem;
     }
 
+    .content section table tbody tr td.bold {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .content section table tbody tr td.bold:hover {
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    
+    .content section table tbody tr td.status > span.true {
+        border-radius: 9999px;
+        padding: 0.2rem 1.8em;
+        color: white;
+        background-color: rgba(63, 218, 92, 0.77);
+        font-size: 9px;
+        cursor: pointer
+    }
+    .content section table tbody tr td.status > span.true:hover {
+
+        background-color: rgba(48, 163, 69, 0.77);
+
+    }
+
+    .content section table tbody tr td.bold:hover {
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline;
+    }
 
 </style>
