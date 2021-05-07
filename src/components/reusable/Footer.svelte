@@ -2,8 +2,8 @@
 </script>
 
 <div class="footer">
-    <div class="title">
-        <h3>RFID OCTO</h3>
+    <div class="content">
+        <p>DIVIN IRAKIZA @RCA</p>
     </div>
 </div>
 
