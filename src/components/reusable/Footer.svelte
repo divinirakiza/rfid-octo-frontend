@@ -3,7 +3,7 @@
 
 <div class="footer">
     <div class="content">
-        <p>DIVIN IRAKIZA @RCA</p>
+        <p>Divin Irakiza @RCA</p>
     </div>
 </div>
 
@@ -18,7 +18,7 @@
     }
 
     .footer p {
-        font-size: 12px;
+        font-size: 0.8rem;
         color: #190933;
         text-align: right;
         /* font-family: 'Noto Sans JP', sans-serif; */

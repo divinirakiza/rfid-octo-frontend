@@ -28,13 +28,13 @@
 
 	.content-area{
 		margin-bottom: 0;
-		padding-bottom: 58px;
+		padding: 58px;
 		min-height: calc(100vh - 60px);
 	}
 
 	.footer-area {
         left: 0;
-        bottom: 0px;
+        bottom: 0;
         width: 100%;
         position: absolute;
     }
