@@ -3,11 +3,7 @@
 	import {formatDate} from '../utils/common';
 
 
-	export let name: string;
-	const array: any = [
-        1, 2, 3
-    ]
-    
+
 
     $: cards = [];
 
