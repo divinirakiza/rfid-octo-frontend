@@ -10,7 +10,14 @@
 
     onMount(async () => {
         const response = await fetch('http://localhost:3000/api/v1/cards');
-        cards = await response.json();
+		const items = await response.json();
+
+		for (const item of items) {
+			const res = await fetch(`http://localhost:3000/api/v1/cards/${item.id}/transactions`);
+			item.transactions = (await res.json()).length;
+		}
+
+		cards = items;
     });
 	
 
@@ -34,7 +41,7 @@
 		<tr>
 			<td class="bold">{card.uuid}</td>
 			<td>{card.balance}Frw</td>
-			<td>5</td>
+			<td>{card.transactions}</td>
 			<td class="status">
 				<span class={card.enabled}>
 					<span>{card.enabled}</span>
