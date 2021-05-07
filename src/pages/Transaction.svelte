@@ -44,7 +44,9 @@
             <tr>
                 <th>Transaction ID</th>
                 <th>Card</th>
+                <th>Card Initial Balance</th>
                 <th>Transport Fare</th>
+                <th>Card Current Balance</th>
                 <th>Done at</th>
                 <th>Actions</th>
             </tr>
@@ -54,7 +56,9 @@
             <tr>
                 <td class="bold"># {transaction.id}</td>
                 <td>{transaction.card.uuid}</td>
+                <td>{transaction.initial_balance} Frw</td>
                 <td>{transaction.fare} Frw</td>
+                <td>{transaction.current_balance} Frw</td>
                 <td>{formatDate(transaction.created_at)}</td>
                 <td>
                     <span class="more" on:click={() => openModal(transaction.card)}>
@@ -65,6 +69,7 @@
             {/each}
         </tbody>
     </table>
+    
 
     <div id="modal-background" class="hidden">
         <div id="modal">
@@ -251,7 +256,7 @@
 
     #modal .details .detail p.value {
         font-size: 13px;
-        width: 20rem;
+        width: 25rem;
         color: #395A76;
 
     }
