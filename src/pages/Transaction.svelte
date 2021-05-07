@@ -24,8 +24,6 @@
         const response = await fetch('http://localhost:3000/api/v1/transactions');
         transactions = await response.json();
     });
-	
-
 
 
 </script>
@@ -60,8 +58,10 @@
 
     <div id="modal-background" class="hidden">
         <div id="modal">
-          <span id="close-btn" on:click={closeModal}>&times;</span>
-          <h3>Card details</h3>
+            <div class="header">
+                    <span id="close-btn" on:click={closeModal}>&times;</span>
+                    <h3>Card details</h3>
+            </div>
           <div class="details">
               <div class="detail">
                   <p class="key">id: </p>
@@ -204,12 +204,14 @@
         width: 40rem;
         padding: 10px 20px;
         border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         font-size: 1.5rem;
     }
 
+    #modal .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #modal h3 {
         font-size: 13px;
         text-transform: uppercase;
