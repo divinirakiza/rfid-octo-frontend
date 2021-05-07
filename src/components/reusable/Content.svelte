@@ -110,9 +110,18 @@
     }
     .content section table tbody tr{
         background-color: #F4F6FB;
-        border-radius: 6px;
-        padding: 2rem 2rem;
 
+    }
+
+    .content section table tbody tr td {
+        padding: 1rem 0.5rem;
+        text-align: left;
+        font-size: 11px;
+        color: #395A76;
+    }
+
+    .content section table tbody tr td:first {
+        border-radius: 6px;
     }
 
 
