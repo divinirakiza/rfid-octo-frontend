@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
 	export let name: string;
 	const array: any = [
         1, 2, 3
@@ -15,6 +17,22 @@
         modal.classList.remove('hidden')
     }
 
+
+    fetch('')
+        .then((response) => console.log(response.json()));
+
+
+
+    let characterName;
+
+    onMount(async () => {
+        const response = await fetch('http://localhost:3000/api/v1/cards');
+        const character = await response.json();
+        console.log(character)
+        characterName = character.name;
+    })
+
+    
 
 </script>
 
@@ -46,14 +64,28 @@
     <div id="modal-background" class="hidden">
         <div id="modal">
           <span id="close-btn" on:click={closeModal}>&times;</span>
-          <p>HOWDY FOLKS!</p>
-          <div class="buttons">
-            <button class="yes">
-              YES
-            </button>
-            <button class="no">
-              NO
-            </button>
+          <h3>Card details</h3>
+          <div class="details">
+              <div class="detail">
+                  <p class="key">id: </p>
+                  <p class="value">3843894389894</p>
+              </div>
+
+              <div class="detail">
+                <p class="key">uuid: </p>
+                <p class="value">3843894389894</p>
+            </div>
+
+            <div class="detail">
+                <p class="key">balance: </p>
+                <p class="value">3843894389894</p>
+            </div>
+
+            <div class="detail">
+                <p class="key">created at: </p>
+                <p class="value">3843894389894</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -172,38 +204,30 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 200px;
+        width: 40rem;
         padding: 10px 20px;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         font-size: 1.5rem;
-    
     }
 
-    .yes, .no {
-  border: none;
-  padding: 7px 14px;
-  font-size: 1rem;
-  border-radius: 5px;
-}
+    #modal h3 {
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #395A76;
+        text-decoration: underline
+        
+    }
 
-.yes {
-  background-color: #00ff00;
-}
+    #close-btn {
+    align-self: flex-end;
+    }
 
-.no {
-  background-color: #ff0000;
-}
+    #close-btn:hover {
+    cursor: pointer;
+    color: #395A76;
+    }
 
-#close-btn {
-  align-self: flex-end;
-}
-
-#close-btn:hover {
-  cursor: pointer;
-  color: #ff0000;
-}
 </style>
