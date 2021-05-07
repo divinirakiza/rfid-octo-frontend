@@ -1,6 +1,7 @@
 <script lang="ts">
 
 	import Navbar from "../components/reusable/Navbar.svelte";
+	import Content from "../components/reusable/Content.svelte";
 	import Footer from "../components/reusable/Footer.svelte";
 
 </script>
@@ -10,9 +11,8 @@
 		<Navbar />
 	</div>
 
-
 	<div class="content-area">
-
+		<Content />
 	</div>
 
 	<div class="footer-area">
