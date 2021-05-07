@@ -44,7 +44,7 @@
                         <td>5000 Frw</td>
                         <td>5</td>
                         <td class="status">
-                            <span class="true">
+                            <span class="false">
                                 <span>TRUE</span>
                              </span>   
                         </td>
@@ -176,7 +176,7 @@
     }
 
     
-    .content section table tbody tr td.status > span.true {
+    .content section table tbody tr td.status > span {
         border-radius: 9999px;
         padding: 0.2rem 1.8em;
         color: white;
@@ -184,10 +184,20 @@
         font-size: 9px;
         cursor: pointer
     }
+    .content section table tbody tr td.status > span.true {
+        background-color: rgba(63, 218, 92, 0.77);
+    }
+
     .content section table tbody tr td.status > span.true:hover {
-
         background-color: rgba(48, 163, 69, 0.77);
+    }
 
+    .content section table tbody tr td.status > span.false {
+        background-color: rgba(233, 30, 30, 0.8);
+    }
+
+    .content section table tbody tr td.status > span.false:hover {
+        background-color: rgba(48, 163, 69, 0.77);
     }
 
     .content section table tbody tr td.bold:hover {
