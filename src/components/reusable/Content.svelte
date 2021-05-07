@@ -114,14 +114,17 @@
     }
 
     .content section table tbody tr td {
-        padding: 1rem 0.5rem;
+        padding: 1rem 0;
         text-align: left;
         font-size: 11px;
         color: #395A76;
     }
 
-    .content section table tbody tr td:first {
-        border-radius: 6px;
+    .content section table tbody tr td:first-child, .content section table tbody tr td:last-child {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        padding-left: 1rem;
+
     }
 
 
