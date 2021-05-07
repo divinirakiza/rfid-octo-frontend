@@ -14,6 +14,7 @@
     .navbar {
         font-family: 'Righteous', cursive;
         background-color: #190933;
+        color: #fff;
     }
 
 </style>
