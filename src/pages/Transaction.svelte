@@ -18,21 +18,6 @@
     }
 
 
-    fetch('')
-        .then((response) => console.log(response.json()));
-
-
-
-    let characterName;
-
-    onMount(async () => {
-        const response = await fetch('http://localhost:3000/api/v1/cards');
-        const character = await response.json();
-        console.log(character)
-        characterName = character.name;
-    })
-
-    
 
 </script>
 

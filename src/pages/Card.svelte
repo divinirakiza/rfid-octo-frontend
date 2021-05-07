@@ -1,8 +1,24 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
+
 	export let name: string;
 	const array: any = [
         1, 2, 3
     ]
+    
+
+    $: cards = [];
+
+
+    onMount(async () => {
+        const response = await fetch('http://localhost:3000/api/v1/cards');
+        cards = await response.json();
+    });
+	
+
+
+
 </script>
 
 <table>
@@ -17,7 +33,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		{#each array as arr, i}
+		{#each cards as card, i}
 		<tr>
 			<td class="bold">673488949054948494</td>
 			<td>5000 Frw</td>
