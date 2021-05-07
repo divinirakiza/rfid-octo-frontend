@@ -1,6 +1,9 @@
 <script lang="ts">
 
-    const openModal = () => {
+    $: selectedCard = {id: null, uuid: null, balance: null, created_at: null};
+
+    const openModal = (card) => {
+        selectedCard = card;
         const modal: HTMLElement = document.getElementById('modal-background');
         modal.style.display = 'block';
     }
@@ -26,6 +29,7 @@
     });
 
 
+
 </script>
 
 <section>
@@ -47,7 +51,7 @@
                 <td>{transaction.fare} Frw</td>
                 <td>{formatDate(transaction.created_at)}</td>
                 <td>
-                    <span class="more" on:click={openModal}>
+                    <span class="more" on:click={() => openModal(transaction.card)}>
                         <svg id="Layer_1" stroke="#395a7629" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="14" height="14" fill="" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M25,14.39C11.32,14.39,1,19,1,25S11.32,35.61,25,35.61,49,31.05,49,25,38.68,14.39,25,14.39Zm0,18.22c-12.38,0-21-4-21-7.61s8.62-7.61,21-7.61,21,4,21,7.61S37.38,32.61,25,32.61Z" fill="#000000"></path><path d="M25,19.45A5.55,5.55,0,1,0,30.55,25,5.56,5.56,0,0,0,25,19.45Zm0,7.1A1.55,1.55,0,1,1,26.55,25,1.54,1.54,0,0,1,25,26.55Z" fill="#000000"></path></svg>
                     </span>
                 </td>
@@ -65,22 +69,22 @@
           <div class="details">
               <div class="detail">
                   <p class="key">id: </p>
-                  <p class="value">3843894389894</p>
+                  <p class="value">{selectedCard.id}</p>
               </div>
 
               <div class="detail">
                 <p class="key">uuid: </p>
-                <p class="value">3843894389894</p>
+                <p class="value">{selectedCard.uuid}</p>
             </div>
 
             <div class="detail">
                 <p class="key">balance: </p>
-                <p class="value">3843894389894</p>
+                <p class="value">{selectedCard.balance} Rwf</p>
             </div>
 
             <div class="detail">
                 <p class="key">created at: </p>
-                <p class="value">3843894389894</p>
+                <p class="value">{formatDate(selectedCard.created_at)}</p>
             </div>
 
           </div>
@@ -223,7 +227,7 @@
     }
 
     #modal .details {
-        padding: 2rem 10rem;
+        padding: 2rem 5rem;
     }
 
     #modal .details .detail {
@@ -236,12 +240,12 @@
         color: #395A76;
 
         text-transform: uppercase;
-        width: 10rem;
+        width: 14rem;
     }
 
     #modal .details .detail p.value {
         font-size: 13px;
-        width: 10rem;
+        width: 20rem;
         color: #395A76;
 
     }
